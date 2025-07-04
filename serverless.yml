@@ -1,0 +1,26 @@
+service: todo-list-api
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-southeast-1
+  stage: dev
+  memorySize: 128
+  timeout: 10
+
+functions: 
+  app:
+    handler: index.handler
+    events: 
+      - httpApi: '*'
+
+plugins:
+  - serverless-offline
+
+package:
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - '*.log'
