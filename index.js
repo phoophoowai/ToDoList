@@ -4,7 +4,6 @@ const toDoRoutes = require('./routes/todoRoutes');
 const serverless = require('serverless-http');
 const port = 8080;
 
-
 app.use(express.json());
 app.use('/todos', toDoRoutes);
 

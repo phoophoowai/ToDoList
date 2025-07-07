@@ -2,6 +2,7 @@ service: todo-list-api
 
 provider:
   name: aws
+  profile: dev
   runtime: nodejs18.x
   region: ap-southeast-1
   stage: dev
