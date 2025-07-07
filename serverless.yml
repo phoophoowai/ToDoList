@@ -8,9 +8,13 @@ provider:
   memorySize: 128
   timeout: 180
 
-functions: 
+functions:
   app:
     handler: index.handler
-    events: 
-      - http: ANY /
-      - http: 'ANY {proxy+}'
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY

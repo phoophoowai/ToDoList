@@ -52,6 +52,9 @@ exports.getToDoListFilter = (req, res) => {
 
 // Create new To Do List
 exports.createToDoList = (req , res) => {
+    console.log("Headers:", req.headers);
+    console.log("Body received:", req.body);
+
     const tempToDOs = Array.isArray(req.body)? req.body : [req.body];
     const createdToDos = tempToDOs.map(item => {
         const newToDos = {
