@@ -7,8 +7,8 @@ const port = 8080;
 app.use(express.json());
 app.use('/todos', toDoRoutes);
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`Server is running on port ${port}`);
+// });
 
 module.exports.handler = serverless(app);
