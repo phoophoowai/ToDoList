@@ -1,4 +1,4 @@
-service: todo-list-api
+service: todo-list-api-v2
 
 provider:
   name: aws
